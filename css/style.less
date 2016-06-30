@@ -1,0 +1,178 @@
+@import url('../fonts/font-awesome/css/font-awesome.min.css');
+@import url('plugins/bootstrap.min.css');
+@import url('plugins/reset.css');
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+@font-face {font-family: 'myriadpro-regular'; src: url('../fonts/myriadpro-regular.otf');}
+@font-face {font-family: 'roboto-regular'; src: url('../fonts/roboto-regular.ttf');}
+
+/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
+body {font: 14px "Open Sans", tahoma, sans-serif;}
+
+/* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
+
+/* We like off-black for text. */
+body, select, input, textarea {color: #333;}
+
+a {color: #03f;}
+a:hover {color: #69f;}
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;}
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700; outline: none; text-decoration: none;}
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+/* Mozilla dosen't style placeholders by default */
+input:-moz-placeholder { color:#a9a9a9; }
+textarea:-moz-placeholder { color:#a9a9a9; }
+
+/* Variables */
+@c_icon_t_header: #f44336;
+@c_gray_black: #444444;
+@c_logo_text_1: #dab212;
+@c_logo_text_2: #5dc5f1;
+@c_text_t_header: #46aaeb;
+@c_active_menu: #fbd232;
+@c_title_1: #fbd232;
+@c_title_2: #42aceb;
+@c_active_pagi_1: #fbd232;
+@c_active_pagi_2: #42aceb;
+@c_pagi: #222222;
+@c_home_button: #2ea3e9;
+
+.b_header_icon{
+  font-family: "FontAwesome";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 30px;
+  height:30px;
+  color: @c_icon_t_header;
+  font-size: 21px;
+}
+
+/* Common */
+@media screen{
+  @media (min-width: 1200px){
+    .container {
+      width: 1200px;
+    }
+  }
+}
+
+
+/*Header*/
+.header{
+  .t-header{
+    border-bottom: 1px solid #d6d6d6;
+
+    i{ color: @c_icon_t_header; }
+
+    h2{ font-weight: 600;
+      font-style: italic;
+      color: @c_gray_black;
+      padding: 12px 0px;
+    }
+  }
+
+  .b-header{
+    padding: 15px 0px;
+
+    .w-logo{
+      float: left;
+      padding-left: 80px;
+
+      .logo{
+        padding-left: 90px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        background: url(../img/logo.png) no-repeat 0px 0px;
+
+        a{
+          color: @c_logo_text_1;
+          font-weight: 600;
+          font-size: 17px;
+          letter-spacing: 1px;
+        }
+        
+        span{
+          color: @c_logo_text_2;
+          font-weight: 700;
+          font-size: 33px;
+          padding-top: 5px;
+          display: block;
+        }
+      }
+    }
+    .c-header{
+      float: right;
+      padding-right: 80px;
+
+      ul{
+        padding-top: 17px;
+        li{
+          float: left;
+          padding-left: 40px;
+          position: relative;
+
+          h3{
+            font-weight: 700;
+            color: @c_text_t_header;
+            font-size: 12px;
+          }
+          a{
+            font-weight: 400;
+            color: @c_gray_black;
+          }
+
+          &:first-child{
+            &:before{
+              content: "\f095";
+              .b_header_icon;
+              left: 4px;
+              font-size: 23px;
+            }
+          }
+
+          &:last-child{
+            margin-left: 50px;
+            &:before{
+              content: "\f0e0";
+              .b_header_icon;
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navbar {
+    border-radius: 0px;
+  }
+
+  .navbar-collapse {
+    padding-right: 0px;
+    padding-left: 0px;
+
+    @media screen {
+      @media (max-width: 768px) {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .nav.navbar-right > li > a{
+    display: inline-block;
+  }
+
+}
+
+/* Home */
