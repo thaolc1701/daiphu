@@ -1,6 +1,8 @@
 @import url('../fonts/font-awesome/css/font-awesome.min.css');
 @import url('plugins/bootstrap.min.css');
 @import url('plugins/reset.css');
+@import url('plugins/owl.carousel.css');
+@import url('plugins/owl.theme.default.min.css');
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 @font-face {
   font-family: 'myriadpro-regular';
@@ -87,6 +89,12 @@ textarea:-moz-placeholder {
 }
 .icon-bar {
   background: #fff;
+}
+.title {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000;
+  font-size: 20px;
 }
 @media screen and (min-width: 1200px) {
   .container {
@@ -268,6 +276,12 @@ textarea:-moz-placeholder {
   padding: 0px;
   border-right: 0px;
 }
+.header .feature-menu li:last-child a:hover:first-child {
+  color: #4374E0;
+}
+.header .feature-menu li:last-child a:hover:last-child {
+  color: #b92c28;
+}
 .header .feature-menu li a {
   padding: 0px;
   font-size: 15px;
@@ -387,9 +401,140 @@ textarea:-moz-placeholder {
   color: #888;
 }
 .footer .b-footer ul.feature-footer li:last-child a:first-child:hover {
-  color: #2ea3e9;
-}
-.footer .b-footer ul.feature-footer li:last-child a:last-child:hover {
   color: #b92c28;
 }
+.footer .b-footer ul.feature-footer li:last-child a:last-child:hover {
+  color: #4374E0;
+}
 /* Home */
+.home-slider {
+  padding: 5px 0px 50px 0px;
+}
+.home-slider .home-carousel .item a {
+  display: block;
+  position: relative;
+}
+.home-slider .home-carousel .item a h4 {
+  position: absolute;
+  left: 0px;
+  bottom: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 25px;
+  font-size: 20px;
+}
+.home-slider .home-carousel.owl-theme .owl-controls {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+}
+.home-slider .home-carousel.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 0px;
+  background: #000;
+}
+.home-slider .home-carousel.owl-theme .owl-dots .owl-dot.active span,
+.home-slider .home-carousel.owl-theme .owl-dots .owl-dot:hover span {
+  background: #42aceb;
+}
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.home-info {
+  padding: 20px 18px 0px 18px;
+  background: #e7f6fc;
+}
+.home-info .sidebar-title {
+  color: #f44336;
+  border-bottom: 1px solid #42aceb;
+}
+.home-info .home-info-carousel .item ul li .sidebar-new {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.home-info .home-info-carousel .item ul li:last-child .sidebar-new {
+  border-bottom: 0px;
+}
+.home-info .home-info-carousel.owl-theme .owl-controls {
+  position: absolute;
+  top: -40px;
+  right: 0px;
+}
+.home-info .home-info-carousel.owl-theme .owl-controls .owl-nav [class*="owl-"] {
+  text-indent: -9999px;
+  margin: 0px;
+  padding: 0px;
+  width: 6px;
+  height: 11px;
+  border-radius: 0px;
+}
+.home-info .home-info-carousel.owl-theme .owl-controls .owl-nav .owl-prev {
+  margin-right: 12px;
+  background: url("../img/ac-prev.png") no-repeat 0px 0px;
+}
+.home-info .home-info-carousel.owl-theme .owl-controls .owl-nav .owl-next {
+  background: url("../img/ac-next.png") no-repeat 0px 0px;
+}
+.home-info .home-info-carousel.owl-theme .owl-controls .owl-nav .owl-prev:hover {
+  background: url("../img/prev.png") no-repeat 0px 0px;
+}
+.home-info .home-info-carousel.owl-theme .owl-controls .owl-nav .owl-next:hover {
+  background: url("../img/next.png") no-repeat 0px 0px;
+}
+.sidebar-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  color: #212121;
+}
+.sidebar-new {
+  padding: 20px 0px;
+  border-bottom: 1px solid #ddd;
+}
+.sidebar-new .table-new {
+  width: 100%;
+}
+.sidebar-new .table-new .sidebar-new-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sidebar-new .table-new tr:last-child td {
+  vertical-align: bottom;
+}
+.sidebar-new .table-new td[rowspan="2"] {
+  width: 118px;
+  padding-right: 18px;
+}
+.sidebar-new .sidebar-new-title {
+  margin-bottom: 4px;
+}
+.sidebar-new .sidebar-new-title a {
+  color: #212121;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+}
+.sidebar-new .sidebar-new-title a:hover {
+  color: #f44336;
+}
+.sidebar-new .rating i.star {
+  color: #2ea3e9;
+  font-size: 12px;
+}
+.sidebar-new .other-info span {
+  color: #444444;
+  font-style: italic;
+  font-size: 12px;
+}
+.sidebar-new .other-info span i {
+  color: #2ea3e9;
+}
