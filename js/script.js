@@ -1,5 +1,13 @@
 var general = {
-
+  initBoxServiceCarousel: function(){
+    $('.box-service-carousel').owlCarousel({
+      loop:true,
+      margin: 0,
+      nav:true,
+      items: 1,
+      dots: false
+    })
+  }
 };
 
 var home = {
@@ -57,10 +65,14 @@ var home = {
   }
 };
 
+
+
 $(document).ready(function() {
 	home.initHomeCarousel();
   home.initHomeInfoCarousel();
   home.initHomeServiceCarousel();
   home.initHomeProjectCarousel();
   home.initHomePartnerCarousel();
+
+  general.initBoxServiceCarousel();
 });

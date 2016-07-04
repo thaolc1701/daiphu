@@ -13,6 +13,14 @@
   font-family: 'roboto-regular';
   src: url('../fonts/roboto-regular.ttf');
 }
+@font-face {
+  font-family: 'utm-avo';
+  src: url('../fonts/utm-avo.ttf');
+}
+@font-face {
+  font-family: 'utm-avobold';
+  src: url('../fonts/utm-avobold.ttf');
+}
 /* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
 body {
   font: 14px "Open Sans", tahoma, sans-serif;
@@ -69,6 +77,12 @@ textarea:-moz-placeholder {
 /* Variables */
 /************ GENERAL STYLES ****************/
 /************ used by all pages *************/
+.navbar {
+  margin-bottom: 0px;
+}
+.navbar-right {
+  margin-right: 0px;
+}
 .title-style {
   text-transform: uppercase;
   font-weight: 600;
@@ -91,6 +105,21 @@ textarea:-moz-placeholder {
 }
 .icon-bar {
   background: #fff;
+}
+.table-new {
+  width: 100%;
+}
+.table-new .sidebar-new-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.table-new tr:last-child td {
+  vertical-align: bottom;
+}
+.table-new td[rowspan="2"] {
+  width: 118px;
+  padding-right: 18px;
 }
 .title {
   text-transform: uppercase;
@@ -176,6 +205,222 @@ textarea:-moz-placeholder {
   max-width: 850px;
   width: 100%;
   font-size: 15px;
+}
+/* Title Page */
+.title-page {
+  padding: 70px 0px;
+  background: rgba(255, 255, 255, 0.5) url("../img/title-bg.jpg") no-repeat center center;
+  background-size: cover;
+  padding-left: 80px;
+}
+/* Navigations */
+.navigations ul {
+  padding: 16px 0px 13px 0px;
+  border-bottom: 1px solid #42aceb;
+}
+.navigations ul li {
+  float: left;
+}
+.navigations ul li:not(:first-child):before {
+  content: "/";
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+.navigations ul li:last-child a {
+  color: #f44336;
+}
+.navigations ul li a {
+  text-transform: uppercase;
+  color: #444444;
+}
+/* Paper */
+.paper {
+  padding: 20px 0px;
+}
+.paper ul {
+  float: right;
+}
+.paper ul li {
+  float: left;
+  border: 1px solid #ddd;
+  margin-right: 6px;
+}
+.paper ul li a {
+  display: block;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  padding: 0px 12px;
+  color: #333;
+}
+.paper ul li.active,
+.paper ul li:hover {
+  background: #42aceb;
+}
+.paper ul li.active a,
+.paper ul li:hover a {
+  color: #fff;
+}
+/* Sidebar-1 */
+.sidebar-1 .sidebar-box {
+  background: url("../img/aside-box-bg.png") repeat 0px 0px;
+  padding: 25px;
+  margin-bottom: 15px;
+}
+.sidebar-1 .sidebar-box:last-child {
+  margin-bottom: 0px;
+}
+.box-service .box-service-carousel.owl-theme .owl-controls {
+  position: absolute;
+  top: -60px;
+  right: 0px;
+}
+.box-service .box-service-carousel.owl-theme .owl-controls .owl-nav [class*="owl-"] {
+  text-indent: -9999px;
+  margin: 0px;
+  padding: 0px;
+  width: 6px;
+  height: 11px;
+  border-radius: 0px;
+}
+.box-service .box-service-carousel.owl-theme .owl-controls .owl-nav .owl-prev {
+  margin-right: 12px;
+  background: url("../img/ac-prev.png") no-repeat 0px 0px;
+}
+.box-service .box-service-carousel.owl-theme .owl-controls .owl-nav .owl-next {
+  background: url("../img/ac-next.png") no-repeat 0px 0px;
+}
+.box-service .box-service-carousel.owl-theme .owl-controls .owl-nav .owl-prev:hover {
+  background: url("../img/prev.png") no-repeat 0px 0px;
+}
+.box-service .box-service-carousel.owl-theme .owl-controls .owl-nav .owl-next:hover {
+  background: url("../img/next.png") no-repeat 0px 0px;
+}
+.box-service .item {
+  position: relative;
+}
+.box-service .item a {
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 163, 233, 0.77);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.box-service .item a:hover {
+  opacity: 1;
+}
+.box-service .item a span {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  font-family: "utm-avo";
+  font-size: 18px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.box-service .item a span strong {
+  font-size: 26px;
+  font-family: "utm-avobold";
+}
+.box-support .box-content > div {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+.box-support .box-content > div:before {
+  content: "\f095";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-family: FontAwesome;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  font-size: 35px;
+  color: #42aceb;
+}
+.box-support .box-content > div h3 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #42aceb;
+}
+.box-support .box-content > div a {
+  color: #f44336;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.box-support .box-content ul li:first-child {
+  margin-bottom: 5px;
+}
+.box-support .box-content ul li:before {
+  content: "\f17e";
+  display: inline-block;
+  margin-right: 10px;
+  color: #42aceb;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  font-family: FontAwesome;
+}
+.box-support .box-content ul li a {
+  color: #333;
+  font-size: 15px;
+}
+.box-views ul li {
+  margin-bottom: 5px;
+}
+.box-views ul li:first-child:before {
+  content: "\f007";
+  display: inline-block;
+  margin-right: 10px;
+  color: #42aceb;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  font-family: FontAwesome;
+}
+.box-views ul li:last-child:before {
+  content: "\f0c0";
+  display: inline-block;
+  margin-right: 10px;
+  color: #444444;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  font-family: FontAwesome;
+}
+.box-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  color: #212121;
+  color: #444444;
+  margin-bottom: 20px;
+}
+.title-section {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  color: #212121;
+  color: #444444;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  color: #42aceb;
+  padding-top: 30px;
+  margin-bottom: 15px;
 }
 @media screen and (min-width: 1200px) {
   .container {
@@ -583,44 +828,34 @@ textarea:-moz-placeholder {
   padding: 20px 0px;
   border-bottom: 1px solid #ddd;
 }
-.sidebar-new .table-new {
-  width: 100%;
+.sidebar-new-title {
+  margin-bottom: 3px;
 }
-.sidebar-new .table-new .sidebar-new-img img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.sidebar-new .table-new tr:last-child td {
-  vertical-align: bottom;
-}
-.sidebar-new .table-new td[rowspan="2"] {
-  width: 118px;
-  padding-right: 18px;
-}
-.sidebar-new .sidebar-new-title {
-  margin-bottom: 4px;
-}
-.sidebar-new .sidebar-new-title a {
+.sidebar-new-title a {
   color: #212121;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 15px;
-  line-height: 22px;
+  line-height: 21px;
 }
-.sidebar-new .sidebar-new-title a:hover {
+.sidebar-new-title a:hover {
   color: #f44336;
 }
-.sidebar-new .rating i.star {
+.sidebar-new-title + p {
+  color: #444444;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.rating i.star {
   color: #2ea3e9;
   font-size: 12px;
 }
-.sidebar-new .other-info span {
+.other-info span {
   color: #444444;
   font-style: italic;
   font-size: 12px;
 }
-.sidebar-new .other-info span i {
+.other-info span i {
   color: #2ea3e9;
 }
 /* Home Service */
@@ -699,6 +934,9 @@ textarea:-moz-placeholder {
 .project-text .title-item a:hover {
   color: #f44336;
 }
+.home-project-carousel .owl-stage .owl-item.active:nth-of-type(1) {
+  transform: scale(2);
+}
 /* Home Partner */
 .home-partner {
   padding: 80px 0px 70px 0px;
@@ -768,4 +1006,25 @@ textarea:-moz-placeholder {
 }
 .home-partner-carousel.owl-theme .owl-controls .owl-nav .owl-prev:hover {
   background: url("../img/partner-ac-prev.png");
+}
+/*********** NEWS PAGE STYLES *************/
+/*********** news.html *******************/
+.news .hot-news .hot-news-w {
+  padding-bottom: 30px;
+}
+.news .hot-news .hot-news-w .hot-new {
+  width: 50%;
+  float: left;
+}
+.news .hot-news .hot-news-w .hot-new img {
+  width: 100%;
+  height: auto;
+}
+.news .old-news .old-news-w ul li {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 14px;
+  margin-bottom: 15px;
+}
+.news .old-news .old-news-w ul li:last-child {
+  margin-bottom: 0px;
 }
