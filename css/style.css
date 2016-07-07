@@ -269,9 +269,6 @@ textarea:-moz-placeholder {
   padding: 25px;
   margin-bottom: 15px;
 }
-.sidebar-1 .sidebar-box:last-child {
-  margin-bottom: 0px;
-}
 .box-service .box-service-carousel.owl-theme .owl-controls {
   position: absolute;
   top: -60px;
@@ -330,6 +327,29 @@ textarea:-moz-placeholder {
 .box-service .item a span strong {
   font-size: 26px;
   font-family: "utm-avobold";
+}
+.box-news .sidebar-new-title a {
+  font-size: 14px;
+}
+.box-news .box-content ul li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0px;
+}
+.box-news .box-content ul li:first-child {
+  padding-top: 0px;
+}
+.box-news .box-content ul li:last-child {
+  margin-bottom: 15px;
+}
+.box-news .box-content div {
+  text-align: right;
+}
+.box-news .box-content div a {
+  color: #42aceb;
+  text-align: right;
+}
+.box-news .box-content div a:hover {
+  text-decoration: underline;
 }
 .box-support .box-content > div {
   position: relative;
@@ -739,7 +759,7 @@ textarea:-moz-placeholder {
 /*********** index.html *******************/
 /* Home Slider */
 .home-slider {
-  padding: 5px 0px 50px 0px;
+  padding: 30px 0px 50px 0px;
 }
 .home-slider .home-carousel .item a {
   display: block;
@@ -1016,9 +1036,73 @@ textarea:-moz-placeholder {
 .news .hot-news .hot-news-w .hot-new {
   width: 50%;
   float: left;
+  position: relative;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 .news .hot-news .hot-news-w .hot-new img {
   width: 100%;
+  height: auto;
+  display: block;
+}
+.news .hot-news .hot-news-w .hot-new .hot-new-info {
+  position: absolute;
+  top: auto;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  padding: 25px;
+  padding-bottom: 10px;
+  color: #fff;
+  background: -webkit-linear-gradient(transparent, #999);
+  background: -o-linear-gradient(transparent, #999);
+  background: -moz-linear-gradient(transparent, #999);
+  background: linear-gradient(transparent, #999);
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.news .hot-news .hot-news-w .hot-new .hot-new-info .hot-new-title p {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+.news .hot-news .hot-news-w .hot-new .hot-new-info .hot-new-title h4 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 8px;
+  -webkit-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  -ms-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.news .hot-news .hot-news-w .hot-new .hot-new-info .hot-new-content {
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+}
+.news .hot-news .hot-news-w .hot-new .hot-new-info .hot-new-content p {
+  line-height: 20px;
+}
+.news .hot-news .hot-news-w .hot-new .hot-new-info .hot-new-content span {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 13px;
+}
+.news .hot-news .hot-news-w .hot-new .hot-new-info:hover {
+  top: 0px;
+  height: 100%;
+  background: -webkit-linear-gradient(transparent, #000);
+  background: -o-linear-gradient(transparent, #000);
+  background: -moz-linear-gradient(transparent, #000);
+  background: linear-gradient(transparent, #000);
+}
+.news .hot-news .hot-news-w .hot-new .hot-new-info:hover .hot-new-content {
+  visibility: visible;
+  opacity: 1;
   height: auto;
 }
 .news .old-news .old-news-w ul li {
@@ -1059,7 +1143,7 @@ textarea:-moz-placeholder {
   left: 0px;
   bottom: 0px;
   width: 100%;
-  padding: 4px 7px;
+  padding: 6px 10px;
 }
 .view-details .clearfix div {
   float: left;
@@ -1074,9 +1158,24 @@ textarea:-moz-placeholder {
 .view-details .clearfix span i {
   color: #fbd232;
 }
+.detail {
+  font-weight: 600;
+  display: inline-block;
+  padding: 6px 25px;
+  text-transform: uppercase;
+  border: 1px solid #2ea3e9;
+  color: #2ea3e9;
+}
+.detail:hover {
+  color: #fff;
+  background: #2ea3e9;
+}
 .projects .projects-inner {
-  border-botom: 1px solid #42aceb;
+  border-bottom: 1px solid #42aceb;
   padding-bottom: 20px;
+}
+.projects .projects-inner ul li:nth-child(odd) {
+  background: #eaf6fd;
 }
 .projects .projects-inner ul li .project-item {
   padding: 20px;
@@ -1084,7 +1183,7 @@ textarea:-moz-placeholder {
 .projects .projects-inner ul li .project-item .project-img {
   float: left;
   position: relative;
-  width: 150px;
+  width: 270px;
   margin-right: 20px;
 }
 .projects .projects-inner ul li .project-item .project-text {
@@ -1098,17 +1197,152 @@ textarea:-moz-placeholder {
   font-style: italic;
   margin-bottom: 20px;
 }
-.projects .projects-inner ul li .project-item .project-text .detail {
-  display: inline-block;
-  padding: 5px 20px;
-  text-transform: uppercase;
-  border: 1px solid #2ea3e9;
-  color: #2ea3e9;
+/*********** PROJECT-DETAILS PAGE STYLES *************/
+/*********** project-details.html ********************/
+.project-title .project-title-t {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
 }
-.projects .projects-inner ul li .project-item .project-text .detail:hover {
+.project-title .project-title-t .title-section {
+  border-bottom: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 8px;
+}
+.project-title .project-title-t .other-info > div {
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  top: -2px;
+}
+.project-title .project-title-t .other-info > span {
+  float: left;
+  margin-right: 20px;
+}
+.project-title .project-title-b {
+  padding: 25px 0px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 25px;
+}
+.project-title .project-title-b ul li {
+  font-size: 15px;
+  margin-bottom: 3px;
+  padding-left: 15px;
+  background: url("../img/point.png") no-repeat 0px 7px;
+  font-style: italic;
+  color: #444444;
+}
+.project-title .project-title-b ul li span {
+  display: inline-block;
+  width: 130px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.project-images .title-section {
+  color: #f44336;
+  margin: 0px;
+  border-bottom: 0px;
+  padding: 0px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.project-images .project-images-inner {
+  padding: 30px;
+  background: #f1f1f1;
+}
+.project-description .project-desc .title-section {
+  color: #f44336;
+  margin: 0px;
+  border-bottom: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+.project-description .project-desc p {
+  color: #444444;
+  margin-bottom: 20px;
+  line-height: 22px;
+}
+.project-description .project-desc img {
+  float: right;
+  display: block;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.project-more-info {
+  padding: 35px 60px;
+  background: #42aceb;
   color: #fff;
-  background: #2ea3e9;
+}
+.project-more-info ul li {
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+.project-more-info ul li span {
+  display: inline-block;
+  width: 170px;
+  font-weight: 700;
+}
+.other-projects {
+  background: #42aceb;
+  padding: 25px;
+}
+.other-projects .title-section {
+  color: #fff;
+  border-bottom: 0px;
+  padding: 0px;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+.other-projects .other-projects-inner {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+.other-projects .other-projects-inner .project-item .project-img {
+  position: relative;
+}
+.other-projects .other-projects-inner .project-item .project-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.other-projects .other-projects-inner .project-item .project-img .view-details {
+  color: #fff;
+  font-size: 13px;
+  font-style: italic;
+}
+.other-projects .other-projects-inner .project-item .project-img .view-details .top {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+}
+.other-projects .other-projects-inner .project-item .project-img .view-details .bottom {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+.other-projects .other-projects-inner .project-item .project-img .view-details .bottom span {
+  float: left;
+  margin-left: 10px;
+}
+.other-projects .other-projects-inner .project-item .title-item {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.other-projects .other-projects-inner .project-item .title-item a {
+  color: #fff;
+  font-size: 14px;
 }
 /*********** PROJECT-DETAILS PAGE STYLES *************/
 /*********** project-details.html ********************/
-/*# sourceMappingURL=style.css.map */
+.services .services-inner ul li {
+  padding: 20px 0px;
+  border-bottom: 1px solid #eee;
+}
+.services .services-inner ul li .service-item .service-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

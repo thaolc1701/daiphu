@@ -186,9 +186,6 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 .sidebar-1{
   .sidebar-box{
     background: url("@{image}aside-box-bg.png") repeat 0px 0px; padding: 25px; margin-bottom: 15px;
-    &:last-child{
-      margin-bottom: 0px;
-    }
   }
 }
 
@@ -227,6 +224,30 @@ textarea:-moz-placeholder { color:#a9a9a9; }
           font-size: 26px;
           font-family: "utm-avobold";
         }
+      }
+    }
+  }
+}
+
+.box-news{
+  .sidebar-new-title a{font-size: 14px;}
+  .box-content{
+    ul{
+      li{
+        border-bottom: 1px solid #ddd; padding: 15px 0px;
+        &:first-child{
+          padding-top: 0px;
+        }
+        &:last-child{
+          margin-bottom: 15px;
+        }
+      }
+    }
+    div{
+      text-align: right;
+      a{
+        color: @c_active_pagi_2; text-align: right;
+        &:hover{text-decoration: underline}
       }
     }
   }
@@ -637,7 +658,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 /* Home Slider */
 .home-slider{
-  padding: 5px 0px 50px 0px;
+  padding: 30px 0px 50px 0px;
   .home-carousel{
     .item{
       a{
@@ -868,9 +889,54 @@ textarea:-moz-placeholder { color:#a9a9a9; }
     .hot-news-w{
       padding-bottom: 30px;
       .hot-new{
-        width: 50%; float: left;
+        width: 50%; float: left; position: relative; border-bottom: 1px solid #fff; border-right: 1px solid #fff;
         img{
-          width: 100%; height: auto;
+          width: 100%; height: auto; display: block;
+        }
+        .hot-new-info{
+          position: absolute; top: auto; bottom: 0px; left: 0px; right: 0px; width: 100%; padding: 25px; padding-bottom: 10px;
+          color: @c_text;
+          background: -webkit-linear-gradient(transparent, #999);
+          background: -o-linear-gradient(transparent, #999);
+          background: -moz-linear-gradient(transparent, #999);
+          background: linear-gradient(transparent, #999);
+          -webkit-transition: all 0.5s ease 0s;
+          -moz-transition: all 0.5s ease 0s;
+          -o-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s;
+          .hot-new-title{
+            p{
+              font-size: 13px; margin-bottom: 3px;
+            }
+            h4{
+              font-weight: 700; text-transform: uppercase; font-size: 18px; margin-bottom: 8px;
+              -webkit-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+              -moz-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+              -ms-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+              text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            }
+          }
+          .hot-new-content{
+            visibility: hidden; opacity: 0; height: 0px;
+            p{
+              line-height: 20px;
+            }
+            span{
+              position: absolute; bottom: 10px; right: 10px; font-size: 13px;
+            }
+          }
+          &:hover{
+            top: 0px; height: 100%;
+            background: -webkit-linear-gradient(transparent, #000);
+            background: -o-linear-gradient(transparent, #000);
+            background: -moz-linear-gradient(transparent, #000);
+            background: linear-gradient(transparent, #000);
+            .hot-new-content {
+              visibility: visible;
+              opacity: 1;
+              height: auto;
+            }
+          }
         }
       }
     }
@@ -907,7 +973,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
     width: 24px !important;
   }
   .clearfix{
-    position: absolute; left: 0px; bottom: 0px; width: 100%; padding: 4px 7px;
+    position: absolute; left: 0px; bottom: 0px; width: 100%; padding: 6px 10px;
     div{
       float: left;
       i{
@@ -923,15 +989,25 @@ textarea:-moz-placeholder { color:#a9a9a9; }
   }
 }
 
+.detail{
+  font-weight: 600; display: inline-block; padding: 6px 25px; text-transform: uppercase; border: 1px solid @c_home_button; color: @c_home_button;
+  &:hover{
+    color: #fff; background: @c_home_button;
+  }
+}
+
 .projects{
   .projects-inner{
-    border-botom: 1px solid @c_active_pagi_2; padding-bottom: 20px;
+    border-bottom: 1px solid @c_active_pagi_2; padding-bottom: 20px;
     ul{
       li{
+        &:nth-child(odd){
+          background: #eaf6fd;
+        }
         .project-item{
           padding: 20px;
           .project-img{
-            float: left; position: relative; width: 150px; margin-right: 20px;
+            float: left; position: relative; width: 270px; margin-right: 20px;
           }
           .project-text{
             overflow: hidden;
@@ -940,12 +1016,6 @@ textarea:-moz-placeholder { color:#a9a9a9; }
             }
             p{
               color: @c_gray_black; font-style: italic; margin-bottom: 20px;
-            }
-            .detail{
-              display: inline-block; padding: 5px 20px; text-transform: uppercase; border: 1px solid @c_home_button; color: @c_home_button;
-              &:hover{
-                color: #fff; background: @c_home_button;
-              }
             }
           }
         }
@@ -956,4 +1026,132 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 /*********** PROJECT-DETAILS PAGE STYLES *************/
 /*********** project-details.html ********************/
+.project-title{
+  .project-title-t{
+    border-bottom: 1px solid #eee; padding-bottom: 4px;
+    .title-section{
+      border-bottom: 0px; padding-bottom: 0px; margin-bottom: 8px;
+    }
+    .other-info{
+      & > div{
+        float: left; margin-right: 20px; position: relative; top: -2px;
+      }
+      & > span{
+        float: left; margin-right: 20px;
+      }
+    }
+  }
+  .project-title-b{
+    padding: 25px 0px; border-bottom: 1px solid #eee; margin-bottom: 25px;
+    ul{
+      li{
+        font-size: 15px; margin-bottom: 3px; padding-left: 15px; background: url("@{image}point.png") no-repeat 0px 7px; font-style: italic; color: @c_gray_black;
+        span{display: inline-block; width: 130px; font-weight: 700; text-transform: uppercase; font-style: normal}
+      }
+    }
+  }
+}
+
+.project-images{
+  .title-section{
+    color: @c_icon_t_header; margin: 0px; border-bottom: 0px; padding: 0px; margin-bottom: 25px; margin-top: 25px;
+  }
+  .project-images-inner{
+    padding: 30px; background: #f1f1f1;
+  }
+}
+
+.project-description{
+  .project-desc{
+    .title-section{
+      color: @c_icon_t_header; margin: 0px; border-bottom: 0px; padding: 0px; margin-bottom: 20px;
+    }
+    p{
+      color: @c_gray_black; margin-bottom: 20px; line-height: 22px;
+    }
+    img{
+      float: right; display: block; margin-left: 15px; margin-bottom: 10px;
+    }
+  }
+}
+
+.project-more-info{
+  padding: 35px 60px; background: @c_active_pagi_2; color: @c_text;
+  ul{
+    li{
+      font-size: 15px; margin-bottom: 3px;
+      span{display: inline-block; width: 170px; font-weight: 700;}
+    }
+  }
+}
+
+
+
+
+
+.other-projects{
+  background: @c_active_pagi_2; padding: 25px;
+  .title-section{
+    color: @c_text; border-bottom: 0px; padding: 0px; margin: 0px; padding-bottom: 10px;
+  }
+  .other-projects-inner{
+    padding-top: 15px; padding-bottom: 10px; border-top: 1px solid rgba(255, 255, 255, 0.7); border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    .project-item{
+      .project-img{
+        position: relative;
+        img{
+          display: block; width: 100%; height: auto;
+        }
+        .view-details{
+          color: @c_text; font-size: 13px; font-style: italic;
+          .top{
+            position: absolute; top: 5px; left: 5px; font-size: 12px;
+          }
+          .bottom{
+            position: absolute; bottom: 5px; right: 5px;
+            span{
+              float: left; margin-left: 10px;
+            }
+          }
+        }
+      }
+      .title-item{
+        margin-bottom: 0px; margin-top: 10px;
+        a{
+          color: @c_text; font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********** PROJECT-DETAILS PAGE STYLES *************/
+/*********** project-details.html ********************/
+.services{
+  .services-inner{
+    ul{
+      li{
+        padding: 20px 0px;
+        border-bottom: 1px solid #eee;
+        .service-item{
+          .service-img{
+            display: block; width: 100%; height: auto;
+          }
+        }
+      }
+    }
+  }
+}
 
