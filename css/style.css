@@ -77,6 +77,53 @@ textarea:-moz-placeholder {
 /* Variables */
 /************ GENERAL STYLES ****************/
 /************ used by all pages *************/
+.search {
+  padding: 51px 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 1px 12px #ccc;
+  z-index: 999;
+}
+.search form {
+  max-width: 600px;
+  width: 100%;
+  margin: 0px auto;
+}
+.search form button {
+  width: 100%;
+  height: 30px;
+  display: block;
+  border: 0px;
+  outline: 0px;
+  padding: 0px 15px;
+  background: #42aceb;
+  text-transform: uppercase;
+}
+.search form .input-group-addon {
+  padding: 0px;
+  background: #42aceb;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid #42aceb;
+}
+.search .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #333;
+  opacity: 1;
+}
+.shopping-cart {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 997;
+  background: #fff;
+}
 .navbar {
   margin-bottom: 0px;
 }
@@ -1346,3 +1393,4 @@ textarea:-moz-placeholder {
   width: 100%;
   height: auto;
 }
+/*# sourceMappingURL=style.css.map */
