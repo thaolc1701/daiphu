@@ -80,7 +80,7 @@ textarea:-moz-placeholder {
 .search {
   padding: 51px 0px;
   position: fixed;
-  top: 0px;
+  top: -200px;
   left: 0px;
   width: 100%;
   background: #fff;
@@ -1249,11 +1249,10 @@ textarea:-moz-placeholder {
   position: absolute;
   top: 0px;
   left: 0px;
-  display: block;
+  opacity: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
+  background: rgba(0, 0, 0, 0.8);
   transition: all 0.5s;
 }
 .view-details:hover {
@@ -1268,24 +1267,24 @@ textarea:-moz-placeholder {
   transform: translate(-50%, -50%);
   width: 24px !important;
 }
-.view-details .clearfix {
+.view-details .view-details-info {
   position: absolute;
   left: 0px;
   bottom: 0px;
   width: 100%;
   padding: 6px 10px;
 }
-.view-details .clearfix div {
+.view-details .view-details-info div {
   float: left;
 }
-.view-details .clearfix div i {
+.view-details .view-details-info div i {
   color: #fff;
 }
-.view-details .clearfix span {
+.view-details .view-details-info span {
   float: right;
   color: #fff;
 }
-.view-details .clearfix span i {
+.view-details .view-details-info span i {
   color: #fbd232;
 }
 .detail {
@@ -1543,6 +1542,13 @@ textarea:-moz-placeholder {
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
+.products-inner .list-products .product-item .product-img:hover .view-details {
+  display: block;
+}
+.products-inner .list-products .product-item .product-img .view-details {
+  opacity: 1;
+  display: none;
+}
 .products-inner .list-products .product-item .product-img .view-details .top {
   padding: 5px 10px;
 }
@@ -1599,11 +1605,11 @@ textarea:-moz-placeholder {
   border: 1px solid rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 1;
   z-index: 997;
   background: #fff;
-  display: none;
   position: absolute;
-  top: 0px;
+  top: -1px;
   left: 100%;
   width: 432px;
   text-align: left;
@@ -1662,6 +1668,7 @@ textarea:-moz-placeholder {
   color: #42aceb;
   font-size: 14px;
   font-weight: 600;
+  display: block;
 }
 .products-inner .list-products .product-item .product-img .view-details .box-details .box-details-info-2 {
   padding: 10px 0px;
@@ -1711,9 +1718,6 @@ textarea:-moz-placeholder {
   background: #42aceb;
   border: 1px solid #42aceb;
   color: #fff;
-}
-.products-inner .list-products .product-item .product-img .view-details:hover .box-details {
-  display: block;
 }
 .products-inner .list-products .product-item .product-title {
   padding: 10px 13px;
