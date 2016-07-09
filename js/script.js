@@ -7,6 +7,25 @@ var general = {
       items: 1,
       dots: false
     })
+  },
+  showAndHideShoppingCart: function(){
+    $('.shopping-cart-button').hover(function(){
+      $(this).children('.shopping-cart').fadeIn('fast');
+    }, function () {
+      $(this).children('.shopping-cart').fadeOut('fast');
+    });
+  },
+  showBoxSearch: function(){
+    $('.btn-search').click(function(){
+
+      return false;
+    })
+  },
+  hideBoxSearch: function(){
+    $('.search .close').click(function () {
+
+      return false;
+    });
   }
 };
 
@@ -83,6 +102,9 @@ $(document).ready(function() {
   home.initHomePartnerCarousel();
 
   general.initBoxServiceCarousel();
+  general.showAndHideShoppingCart();
+  general.showBoxSearch();
+  general.hideBoxSearch();
 
   product.scrollCompany();
 });
