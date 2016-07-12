@@ -2,10 +2,11 @@
 @import url('plugins/bootstrap.min.css');
 @import url('plugins/jquery-ui.min.css');
 @import url('plugins/reset.css');
+@import url('plugins/_owl.carousel.css');
+@import url('plugins/_owl.theme.css');
+@import url('plugins/_owl.transitions.css');
 @import url('plugins/owl.carousel.css');
 @import url('plugins/owl.theme.default.min.css');
-//@import url('plugins/owl.theme.css');
-//@import url('plugins/owl.transitions.css');
 @import url('plugins/jquery.mCustomScrollbar.min.css');
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
@@ -1472,8 +1473,12 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 .ui-widget-header{
   background: @c_home_button;
 }
+
+.ui-widget-content{
+  background: #555;
+}
 .ui-widget{
-  font-size: 0.7em
+  font-size: 0.6em
 }
 
 /*********** PRODUCT DETAILS PAGE STYLES *************/
@@ -1507,7 +1512,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
         div{
           overflow: hidden;
           a{
-            color: @c_active_pagi_2; font-size: 13px; margin-right: 25px;
+            color: @c_active_pagi_2; font-size: 13px; margin-right: 20px;
             &:hover{
               text-decoration: underline;
             }
@@ -1523,7 +1528,28 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 .product-desc{
   & > .product-img{
-    border: 1px solid #ddd; padding: 25px;
+    border: 1px solid #ddd; padding: 20px;
+    #sync1 .item{
+      margin: 5px; border: 1px solid #ddd;
+    }
+    #sync2 .item{
+      margin: 5px; border: 1px solid #ddd;
+    }
+    #sync2 .owl-item.synced .item{
+      border: 3px solid @c_active_pagi_2;
+    }
+    .owl-theme .owl-controls{
+      margin: 0px;
+    }
+    .owl-theme .owl-controls .owl-buttons div{
+      position: absolute; top: 0px; width: 30px; height: 100%; text-indent: -9999px; background: transparent;
+    }
+    .owl-theme .owl-controls .owl-buttons div.owl-prev{
+      left: 0px;
+    }
+    .owl-theme .owl-controls .owl-buttons div.owl-next{
+      right: 0px;
+    }
   }
   .product-info{
     padding: 25px; margin: 10px 0px 15px 0px;
@@ -1787,4 +1813,6 @@ textarea:-moz-placeholder { color:#a9a9a9; }
     }
   }
 }
+
+
 

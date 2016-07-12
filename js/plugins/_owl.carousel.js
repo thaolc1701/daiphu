@@ -1,8 +1,8 @@
 /*
- *  jQuery OwlCarousel v1.3.3
+ *  jQuery owlCarousel_1 v1.3.3
  *
  *  Copyright (c) 2013 Bartosz Wojciechowski
- *  http://www.owlgraphic.com/owlcarousel/
+ *  http://www.owlgraphic.com/owlCarousel_1/
  *
  *  Licensed under MIT
  *
@@ -26,7 +26,7 @@ if (typeof Object.create !== "function") {
             var base = this;
 
             base.$elem = $(el);
-            base.options = $.extend({}, $.fn.owlCarousel.options, base.$elem.data(), options);
+            base.options = $.extend({}, $.fn.owlCarousel_1.options, base.$elem.data(), options);
 
             base.userOptions = options;
             base.loadContent();
@@ -1437,7 +1437,7 @@ if (typeof Object.create !== "function") {
 
     };
 
-    $.fn.owlCarousel = function (options) {
+    $.fn.owlCarousel_1 = function (options) {
         return this.each(function () {
             if ($(this).data("owl-init") === true) {
                 return false;
@@ -1445,11 +1445,11 @@ if (typeof Object.create !== "function") {
             $(this).data("owl-init", true);
             var carousel = Object.create(Carousel);
             carousel.init(options, this);
-            $.data(this, "owlCarousel", carousel);
+            $.data(this, "owlCarousel_1", carousel);
         });
     };
 
-    $.fn.owlCarousel.options = {
+    $.fn.owlCarousel_1.options = {
 
         items : 5,
         itemsCustom : false,

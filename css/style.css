@@ -2,6 +2,9 @@
 @import url('plugins/bootstrap.min.css');
 @import url('plugins/jquery-ui.min.css');
 @import url('plugins/reset.css');
+@import url('plugins/_owl.carousel.css');
+@import url('plugins/_owl.theme.css');
+@import url('plugins/_owl.transitions.css');
 @import url('plugins/owl.carousel.css');
 @import url('plugins/owl.theme.default.min.css');
 @import url('plugins/jquery.mCustomScrollbar.min.css');
@@ -1816,8 +1819,11 @@ textarea:-moz-placeholder {
 .ui-widget-header {
   background: #2ea3e9;
 }
+.ui-widget-content {
+  background: #555;
+}
 .ui-widget {
-  font-size: 0.7em;
+  font-size: 0.6em;
 }
 /*********** PRODUCT DETAILS PAGE STYLES *************/
 /*********** product-details.html ********************/
@@ -1882,7 +1888,7 @@ textarea:-moz-placeholder {
 .product-details-inner .search-products > div:last-child div a {
   color: #42aceb;
   font-size: 13px;
-  margin-right: 25px;
+  margin-right: 20px;
 }
 .product-details-inner .search-products > div:last-child div a:hover {
   text-decoration: underline;
@@ -1892,7 +1898,35 @@ textarea:-moz-placeholder {
 }
 .product-desc > .product-img {
   border: 1px solid #ddd;
-  padding: 25px;
+  padding: 20px;
+}
+.product-desc > .product-img #sync1 .item {
+  margin: 5px;
+  border: 1px solid #ddd;
+}
+.product-desc > .product-img #sync2 .item {
+  margin: 5px;
+  border: 1px solid #ddd;
+}
+.product-desc > .product-img #sync2 .owl-item.synced .item {
+  border: 3px solid #42aceb;
+}
+.product-desc > .product-img .owl-theme .owl-controls {
+  margin: 0px;
+}
+.product-desc > .product-img .owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+  top: 0px;
+  width: 30px;
+  height: 100%;
+  text-indent: -9999px;
+  background: transparent;
+}
+.product-desc > .product-img .owl-theme .owl-controls .owl-buttons div.owl-prev {
+  left: 0px;
+}
+.product-desc > .product-img .owl-theme .owl-controls .owl-buttons div.owl-next {
+  right: 0px;
 }
 .product-desc .product-info {
   padding: 25px;
