@@ -1346,16 +1346,27 @@ textarea:-moz-placeholder { color:#a9a9a9; }
             }
             .box-details-image{
               padding: 10px 0px;
-              .slider{
-                margin-bottom: 10px;
-                .item{
-                  border: 1px solid #ddd;
-                }
+              margin: -5px;
+              .slider .item{
+                margin: 5px; border: 1px solid #ddd;
               }
-              .thumbnails{
-                .item{
-                  border: 1px solid #ddd;
-                }
+              .thumbnails .item{
+                margin: 5px; border: 1px solid #ddd;
+              }
+              .thumbnails .owl-item.synced .item{
+                border: 3px solid @c_active_pagi_2;
+              }
+              .owl-theme .owl-controls{
+                margin: 0px;
+              }
+              .owl-theme .owl-controls .owl-buttons div{
+                position: absolute; top: 0px; width: 30px; height: 100%; text-indent: -9999px; background: transparent;
+              }
+              .owl-theme .owl-controls .owl-buttons div.owl-prev{
+                left: 0px;
+              }
+              .owl-theme .owl-controls .owl-buttons div.owl-next{
+                right: 0px;
               }
             }
             .box-details-info-1{
