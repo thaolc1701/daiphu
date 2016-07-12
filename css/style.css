@@ -1,5 +1,6 @@
 @import url('../fonts/font-awesome/css/font-awesome.min.css');
 @import url('plugins/bootstrap.min.css');
+@import url('plugins/jquery-ui.min.css');
 @import url('plugins/reset.css');
 @import url('plugins/owl.carousel.css');
 @import url('plugins/owl.theme.default.min.css');
@@ -1784,6 +1785,39 @@ textarea:-moz-placeholder {
 }
 .mCSB_inside > .mCSB_container {
   margin-right: 15px;
+}
+.slider-price > div:first-child {
+  margin-bottom: 5px;
+}
+.slider-price #min-price {
+  float: left;
+}
+.slider-price #max-price {
+  float: right;
+}
+.slider-ph > div:first-child {
+  margin-bottom: 5px;
+}
+.slider-ph #min-ph {
+  float: left;
+}
+.slider-ph #max-ph {
+  float: right;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.ui-widget-header {
+  background: #2ea3e9;
+}
+.ui-widget {
+  font-size: 0.7em;
 }
 /*********** PRODUCT DETAILS PAGE STYLES *************/
 /*********** product-details.html ********************/
