@@ -1966,7 +1966,6 @@ textarea:-moz-placeholder {
   font-weight: 600;
 }
 .discuss .discuss-form {
-  margin-bottom: 10px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
 }
@@ -1979,11 +1978,11 @@ textarea:-moz-placeholder {
   padding: 6px;
 }
 .discuss .discuss-form form .field textarea {
-  border: 0px;
-  outline: 0px;
+  border: 1px solid #ddd;
   width: 100%;
   min-height: 70px;
   resize: vertical;
+  padding: 5px;
 }
 .discuss .discuss-form form .field:last-child {
   border-bottom: 0px;
@@ -2025,11 +2024,103 @@ textarea:-moz-placeholder {
   padding: 0px 15px;
   margin-left: 40px;
 }
+.discuss .discuss-form > div {
+  font-size: 13px;
+}
 .discuss .discuss-form > div p {
   float: left;
 }
 .discuss .discuss-form > div div {
   float: right;
+}
+.discuss .discuss-content ul li {
+  border-bottom: 1px solid #eee;
+  padding-top: 10px;
+}
+.discuss .discuss-content .level {
+  margin-bottom: 10px;
+}
+.discuss .discuss-content .level-2 {
+  background: #F0F0F0;
+  padding: 15px;
+  position: relative;
+}
+.discuss .discuss-content .level-2:before {
+  content: "";
+  display: block;
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  top: -9px;
+  left: 13px;
+  background: url(../img/caret-up.png) no-repeat 0px 0px;
+}
+.discuss .discuss-content .level-content .avatar {
+  margin-bottom: 10px;
+}
+.discuss .discuss-content .level-content .avatar a {
+  vertical-align: top;
+}
+.discuss .discuss-content .level-content .avatar a img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.discuss .discuss-content .level-content .avatar a span {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #42aceb;
+}
+.discuss .discuss-content .level-content .text {
+  margin-bottom: 10px;
+}
+.discuss .discuss-content .level-content .text p {
+  color: #444444;
+  line-height: 20px;
+}
+.discuss .discuss-content .level-content .more a {
+  color: #444444;
+  font-style: italic;
+  font-size: 13px;
+  margin-right: 15px;
+}
+.discuss .discuss-content .level-form form {
+  border: 1px solid #ddd;
+}
+.discuss .discuss-content .level-form form .field {
+  border-bottom: 1px solid #ddd;
+  padding: 6px;
+}
+.discuss .discuss-content .level-form form .field textarea {
+  border: 0px;
+  outline: 0px;
+  width: 100%;
+  min-height: 70px;
+  resize: vertical;
+  padding: 5px;
+  background: transparent;
+}
+.discuss .discuss-content .level-form form .field:last-child {
+  border-bottom: 0px;
+}
+.discuss .discuss-content .level-form form .field:last-child a {
+  font-size: 14px;
+  color: #42aceb;
+  float: left;
+  margin-top: 5px;
+}
+.discuss .discuss-content .level-form form .field:last-child a i {
+  margin-right: 5px;
+  font-size: 16px;
+}
+.discuss .discuss-content .level-form form .field:last-child button {
+  float: right;
+  height: 30px;
+  border: 0px;
+  outline: 0px;
+  background: #42aceb;
+  color: #fff;
+  padding: 0px 15px;
+  margin-left: 40px;
 }
 .product-feature h1 {
   color: #fff;
@@ -2133,3 +2224,4 @@ textarea:-moz-placeholder {
   background: #42aceb;
   color: #fff;
 }
+/*# sourceMappingURL=style.css.map */
