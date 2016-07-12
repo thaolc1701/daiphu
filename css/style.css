@@ -2139,7 +2139,7 @@ textarea:-moz-placeholder {
   width: 19px;
   height: 9px;
   position: absolute;
-  top: -9px;
+  top: -8px;
   left: 13px;
   background: url(../img/caret-up.png) no-repeat 0px 0px;
 }

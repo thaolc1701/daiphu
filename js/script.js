@@ -39,10 +39,6 @@ var home = {
       autoplay:true,
       autoplayTimeout:5000,
       autoplayHoverPause:true
-
-      // slideSpeed : 300,
-      // paginationSpeed : 400,
-      // singleItem : true
     })
   },
   initHomeInfoCarousel: function(){
@@ -52,10 +48,6 @@ var home = {
       nav:true,
       items: 1,
       dots: false
-
-      // items: 1,
-      // navigation : true,
-      // pagination: false
     })
   },
   initHomeServiceCarousel: function(){
@@ -67,8 +59,6 @@ var home = {
       autoplay:true,
       autoplayTimeout:3000,
       autoplayHoverPause:true
-
-      // items: 4
     })
   },
   initHomeProjectCarousel: function(){
@@ -78,10 +68,6 @@ var home = {
       nav:true,
       items: 3,
       dots: false
-
-      // items: 3,
-      // navigation : true,
-      // pagination: false
     })
   },
   initHomePartnerCarousel: function(){
@@ -94,10 +80,6 @@ var home = {
       autoplayTimeout:5000,
       autoplayHoverPause:true,
       dots: false
-
-      // items: 4,
-      // navigation : true,
-      // pagination: false
     });
   }
 };
