@@ -69,7 +69,6 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 /************ GENERAL STYLES ****************/
 /************ used by all pages *************/
 .search{
-  padding: 51px 0px; position: fixed; top: -200px; left: 0px; width: 100%; background: #fff; box-shadow: 0px 1px 12px #ccc; z-index: 9999;
   form{
     max-width: 600px; width: 100%; margin: 0px auto;
     input{
@@ -83,9 +82,49 @@ textarea:-moz-placeholder { color:#a9a9a9; }
     }
   }
   .close{
-    position: absolute; top: 10px; right: 10px; color: #333; opacity: 1;
+    position: absolute; top: 10px; right: 10px; color: @c_icon_t_header; opacity: 1;
   }
 }
+
+.search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  padding: 51px 15px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 1px 12px #ccc;
+  z-index: 9999;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 1;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+.search-open .search {
+  visibility: visible;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+//.search-open::after {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  background: rgba(0,0,0,0.2);
+//  content: '';
+//  -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+//  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+//  width: 100%;
+//  height: 100%;
+//  opacity: 1;
+//  -webkit-transition: opacity 0.5s;
+//  transition: opacity 0.5s;
+//}
 
 .shopping-cart{
   border: 1px solid rgba(0,0,0,.1);
@@ -460,6 +499,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
         }
       }
     }
+
     .c-header{
       float: right;
       padding-right: 80px;
@@ -495,6 +535,53 @@ textarea:-moz-placeholder { color:#a9a9a9; }
             &:before{
               content: "\f0e0";
               .b_header_icon;
+            }
+          }
+        }
+      }
+    }
+    @media screen{
+      @media (max-width: 991px){
+        .w-logo{
+          padding-left: 0px; float: none;
+          .logo{
+            width: 310px; margin: 0px auto; background-size: 62px; padding-left: 58px;
+            a{
+              font-size: 14px;
+              span{
+                font-size: 28px;
+              }
+            }
+          }
+        }
+        .c-header {
+          float: none; padding-right: 0px;
+          ul{
+            text-align: center; padding: 7px; padding-bottom: 0px;
+            li{
+              float: none; display: inline-block; padding-left: 30px;
+              h3{
+                display: none;
+              }
+
+              &:first-child{
+                padding-left: 22px;
+                &:before{
+                  font-size: 18px; top: 0px; width: 10px;
+                }
+              }
+
+              &:last-child{
+                margin-left: 15px;
+                &:before{
+                  font-size: 17px; top:0px;
+                }
+              }
+              @media (max-width: 320px){
+                &:last-child{
+                  margin-left: 0px;
+                }
+              }
             }
           }
         }
@@ -1425,7 +1512,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
       border-bottom: 0px;
     }
     .box-title{
-      font-weight: 700; font-size: 15px; color: @c_active_pagi_2; padding-bottom: 10px; margin-bottom: 15px;
+      font-weight: 700; font-size: 15px; color: @c_active_pagi_2; padding-bottom: 10px; margin-bottom: 15px; cursor: pointer;
       i{float: right; margin: 2px; margin-right: -2px; color: #444;}
     }
     .box-content{
@@ -1542,13 +1629,13 @@ textarea:-moz-placeholder { color:#a9a9a9; }
       margin: 0px;
     }
     .owl-theme .owl-controls .owl-buttons div{
-      position: absolute; top: 0px; width: 30px; height: 100%; text-indent: -9999px; background: transparent;
+      position: absolute; top: 0px; width: 25px; height: 100%; text-indent: -9999px; background: transparent;
     }
     .owl-theme .owl-controls .owl-buttons div.owl-prev{
-      left: 0px;
+      left: 0px; background: url("@{image}prev-2.png") no-repeat center center;
     }
     .owl-theme .owl-controls .owl-buttons div.owl-next{
-      right: 0px;
+      right: 0px; background: url("@{image}next-2.png") no-repeat center center;
     }
   }
   .product-info{
