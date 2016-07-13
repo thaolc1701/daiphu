@@ -600,6 +600,33 @@ textarea:-moz-placeholder {
     padding: 20px 30px 20px 20px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .navbar-nav > li > a {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navbar-nav > li > a {
+    padding: 20px 15px 20px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar-nav > li > a {
+    padding: 20px 15px 20px 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navbar-nav > li > a {
+    padding: 10px 15px;
+  }
+  .navbar-toggle {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .navbar {
+    min-height: 42px;
+  }
+}
 /********** HEADER STYLES **************/
 /********** used by all pages **********/
 .header .t-header {
@@ -613,6 +640,40 @@ textarea:-moz-placeholder {
   font-style: italic;
   color: #444444;
   padding: 12px 0px;
+  float: left;
+}
+.header .t-header .feature-menu {
+  float: right;
+  padding: 8px 0px 4px 0px;
+  display: none;
+}
+.header .t-header .feature-menu .shopping-cart-button {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.header .t-header .feature-menu li {
+  float: left;
+}
+.header .t-header .feature-menu li:last-child {
+  padding: 0px;
+  border-right: 0px;
+  padding-top: 2px;
+}
+.header .t-header .feature-menu li:last-child a:hover:first-child {
+  color: #4374E0;
+}
+.header .t-header .feature-menu li:last-child a:hover:last-child {
+  color: #b92c28;
+}
+@media screen and (max-width: 991px) {
+  .header .t-header .feature-menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 550px) {
+  .header .t-header h2 {
+    display: none;
+  }
 }
 .header .b-header {
   padding: 15px 0px;
@@ -841,6 +902,28 @@ textarea:-moz-placeholder {
   position: absolute;
   top: 100%;
   right: 0px;
+}
+@media screen and (max-width: 991px) {
+  .header #myNavbar {
+    position: relative;
+  }
+  .header #myNavbar .feature-menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header .main-menu li:hover a {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .header .main-menu li:hover a:before {
+    display: none;
+  }
+  .header .main-menu li.active a {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .header .main-menu li.active a:before {
+    display: none;
+  }
 }
 /********** FOOTER STYLES **************/
 /********** used by all pages **********/
@@ -2383,3 +2466,4 @@ textarea:-moz-placeholder {
   background: #42aceb;
   color: #fff;
 }
+/*# sourceMappingURL=style.css.map */
