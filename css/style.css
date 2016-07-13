@@ -268,6 +268,11 @@ textarea:-moz-placeholder {
   width: 118px;
   padding-right: 18px;
 }
+@media screen and (max-width: 360px) {
+  .table-new td[rowspan="2"] {
+    display: none;
+  }
+}
 .title {
   text-transform: uppercase;
   font-weight: 600;
@@ -308,6 +313,14 @@ textarea:-moz-placeholder {
   height: 13px;
   margin-right: 15px;
   background: #42aceb;
+}
+@media screen and (max-width: 477px) {
+  .title-1 {
+    font-size: 20px;
+  }
+  .title-2 {
+    font-size: 20px;
+  }
 }
 .title-item {
   margin-bottom: 10px;
@@ -353,6 +366,11 @@ textarea:-moz-placeholder {
   max-width: 850px;
   width: 100%;
   font-size: 15px;
+}
+@media screen and (max-width: 477px) {
+  .home-desc {
+    padding: 20px 0px;
+  }
 }
 /* Title Page */
 .title-page {
@@ -646,6 +664,14 @@ textarea:-moz-placeholder {
   float: right;
   padding: 8px 0px 4px 0px;
   display: none;
+}
+.header .t-header .feature-menu .shopping-cart-title h2 {
+  color: #f44336;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 17px;
+  float: none;
+  padding: 0px;
 }
 .header .t-header .feature-menu .shopping-cart-button {
   border-left: 1px solid #ddd;
@@ -1003,6 +1029,14 @@ textarea:-moz-placeholder {
   width: 22px;
   font-size: 16px;
 }
+@media screen and (max-width: 991px) {
+  .footer .t-footer {
+    padding: 25px 0px 0px 0px;
+  }
+  .footer .t-footer .footer-mb {
+    margin-bottom: 25px;
+  }
+}
 .footer .b-footer {
   color: #888;
   padding: 12px 0px;
@@ -1076,6 +1110,33 @@ textarea:-moz-placeholder {
 .home-slider .home-carousel.owl-theme .owl-dots .owl-dot.active span,
 .home-slider .home-carousel.owl-theme .owl-dots .owl-dot:hover span {
   background: #42aceb;
+}
+@media screen and (max-width: 991px) {
+  .home-slider {
+    padding: 15px 0px 35px 0px;
+  }
+  .home-slider .home-carousel .item a h4 {
+    bottom: 0px;
+    padding: 12px 25px;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  .home-slider .home-carousel.owl-theme .owl-controls {
+    position: static;
+    margin-bottom: 5px;
+  }
+  .home-slider .home-carousel.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 0px;
+    background: #000;
+  }
+  .home-slider .home-carousel.owl-theme .owl-dots .owl-dot.active span,
+  .home-slider .home-carousel.owl-theme .owl-dots .owl-dot:hover span {
+    background: #42aceb;
+  }
 }
 .image {
   width: 100%;
@@ -1243,25 +1304,36 @@ textarea:-moz-placeholder {
 .home-project-carousel .owl-stage .owl-item.active:nth-of-type(1) {
   transform: scale(2);
 }
+@media screen and (max-width: 1200px) {
+  .home-project .project-text {
+    padding: 20px 10px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .home-project .project-text {
+    padding: 20px 10px;
+  }
+  .home-project {
+    padding: 40px 0px 0px 0px;
+  }
+  .home-project-carousel {
+    padding: 0px;
+  }
+  .home-project-carousel.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 0px;
+    background: #000;
+  }
+  .home-project-carousel.owl-theme .owl-dots .owl-dot.active span,
+  .home-project-carousel.owl-theme .owl-dots .owl-dot:hover span {
+    background: #42aceb;
+  }
+}
 /* Home Partner */
 .home-partner {
   padding: 80px 0px 70px 0px;
-}
-.swiper-slide {
-  width: 160px;
-  height: 50px;
-  border: 1px solid #ddd;
-  text-align: center;
-  line-height: 50px;
-  position: relative;
-}
-.swiper-slide img {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
 }
 .home-partner-carousel {
   width: 100%;
@@ -1312,6 +1384,25 @@ textarea:-moz-placeholder {
 }
 .home-partner-carousel.owl-theme .owl-controls .owl-nav .owl-prev:hover {
   background: url("../img/partner-ac-prev.png");
+}
+@media screen and (max-width: 991px) {
+  .home-partner {
+    padding: 30px 0px 20px 0px;
+  }
+  .home-partner-carousel {
+    margin: 30px auto 0px auto;
+  }
+  .home-partner-carousel.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 0px;
+    background: #000;
+  }
+  .home-partner-carousel.owl-theme .owl-dots .owl-dot.active span,
+  .home-partner-carousel.owl-theme .owl-dots .owl-dot:hover span {
+    background: #fbd232;
+  }
 }
 /*********** NEWS PAGE STYLES *************/
 /*********** news.html *******************/
@@ -2466,4 +2557,3 @@ textarea:-moz-placeholder {
   background: #42aceb;
   color: #fff;
 }
-/*# sourceMappingURL=style.css.map */
