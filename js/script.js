@@ -369,10 +369,29 @@ var product_details = {
       loop:true,
       margin: 30,
       nav:false,
-      items: 3,
       autoplay:true,
       autoplayTimeout:3000,
-      autoplayHoverPause:true
+      autoplayHoverPause:true,
+      responsive:{
+        0:{
+          items:1,
+          nav:false,
+          dots: true
+        },
+        480:{
+          items:2,
+          nav:false,
+          dots: true
+        },
+        768:{
+          items:3,
+          nav:false,
+          dots: true
+        },
+        1024:{
+          items:3
+        }
+      }
     })
   }
 }
