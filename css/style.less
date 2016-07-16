@@ -370,6 +370,16 @@ textarea:-moz-placeholder { color:#a9a9a9; }
   }
 }
 
+@media screen {
+  @media (max-width: 767px) {
+    .sidebar-1{
+      .sidebar-box{
+        padding: 10px;
+      }
+    }
+  }
+}
+
 .box-service{
   .box-service-carousel.owl-theme .owl-controls{
     position: absolute; top: -60px; right: 0px;
@@ -1397,6 +1407,9 @@ textarea:-moz-placeholder { color:#a9a9a9; }
           padding: 20px;
           .project-img{
             float: left; position: relative; width: 270px; margin-right: 20px;
+            .view-details{
+
+            }
           }
           .project-text{
             overflow: hidden;
@@ -1405,6 +1418,59 @@ textarea:-moz-placeholder { color:#a9a9a9; }
             }
             p{
               color: @c_gray_black; font-style: italic; margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen{
+  @media (max-width: 767px){
+    .projects{
+      .projects-inner{
+        ul{
+          li{
+            .project-item{
+              padding: 20px 0px;
+              .project-img{
+                width: 150px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+  @media (max-width: 480px) {
+    .projects{
+      .projects-inner{
+        ul{
+          li{
+            .project-item{
+              p{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 360px) {
+    .projects{
+      .projects-inner{
+        ul{
+          li{
+            .project-item{
+              .project-img{
+                width: 100%; float: none; margin-bottom: 10px;
+                & > img{
+                  display: block; width: 100%; height: auto;
+                }
+              }
             }
           }
         }
@@ -1475,9 +1541,6 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 }
 
 
-
-
-
 .other-projects{
   background: @c_active_pagi_2; padding: 25px;
   .title-section{
@@ -1515,8 +1578,26 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 }
 
 
-/*********** PROJECT-DETAILS PAGE STYLES *************/
-/*********** project-details.html ********************/
+@media screen {
+  @media (max-width: 991px) {
+    .other-projects{
+      .other-projects-inner{
+        .project-item{
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-more-info{
+      padding: 15px;
+    }
+  }
+}
+
+/*********** SERVICES PAGE STYLES *************/
+/*********** services.html ********************/
 .services{
   .services-inner{
     ul{
@@ -1526,12 +1607,40 @@ textarea:-moz-placeholder { color:#a9a9a9; }
         .service-item{
           .service-img{
             display: block; width: 100%; height: auto;
+            & > img{
+              display: block; width: 100%; height: auto;
+            }
           }
         }
       }
     }
   }
 }
+
+@media screen {
+  @media (max-width: 767px) {
+    .services{
+      .services-inner{
+        ul{
+          li{
+            padding: 0px; border-bottom: 0px solid #eee;
+            .service-item{
+              margin-bottom: 30px;
+            }
+            &:last-child{
+              .service-item{
+                &:last-child{
+                  margin-bottom: 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /*********** PRODUCTS PAGE STYLES *************/
 /*********** products.html ********************/
