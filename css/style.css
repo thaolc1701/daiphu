@@ -1713,6 +1713,52 @@ textarea:-moz-placeholder {
   padding: 30px;
   background: #f1f1f1;
 }
+.project-images .project-images-inner #project-sync1 .item div {
+  background: #fff;
+  margin-bottom: 10px;
+}
+.project-images .project-images-inner #project-sync1 .item div img {
+  max-width: 356px;
+  width: 100%;
+  display: block;
+  height: auto;
+  margin: 0px auto;
+}
+.project-images .project-images-inner #project-sync1 .item p {
+  line-height: 25px;
+}
+.project-images .project-images-inner #project-sync2 {
+  margin-bottom: 25px;
+}
+.project-images .project-images-inner #project-sync2 .item {
+  margin: 5px;
+  border: 1px solid #ddd;
+}
+.project-images .project-images-inner #project-sync2 .owl-item.synced .item {
+  border: 3px solid #42aceb;
+}
+.project-images .project-images-inner .owl-theme .owl-controls {
+  margin: 0px;
+}
+.project-images .project-images-inner .owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+  top: 0px;
+  width: 40px;
+  height: 100%;
+  text-indent: -9999px;
+  background: transparent;
+  border-radius: 0px;
+}
+.project-images .project-images-inner .owl-theme .owl-controls .owl-buttons div.owl-prev {
+  left: -20px;
+  background: url("../img/prev-3.png") no-repeat center center;
+  border-radius: 0px;
+}
+.project-images .project-images-inner .owl-theme .owl-controls .owl-buttons div.owl-next {
+  right: -20px;
+  background: url("../img/next-3.png") no-repeat center center;
+  border-radius: 0px;
+}
 .project-description .project-desc .title-section {
   color: #f44336;
   margin: 0px;

@@ -1561,6 +1561,40 @@ textarea:-moz-placeholder { color:#a9a9a9; }
   }
   .project-images-inner{
     padding: 30px; background: #f1f1f1;
+    #project-sync1{
+      .item{
+        div{
+          background: #fff; margin-bottom: 10px;
+          img{
+            max-width: 356px; width: 100%; display: block; height: auto; margin: 0px auto;
+          }
+        }
+        p{
+          line-height: 25px;
+        }
+      }
+    }
+    #project-sync2{
+      margin-bottom: 25px;
+    }
+    #project-sync2 .item{
+      margin: 5px; border: 1px solid #ddd;
+    }
+    #project-sync2 .owl-item.synced .item{
+      border: 3px solid @c_active_pagi_2;
+    }
+    .owl-theme .owl-controls{
+      margin: 0px;
+    }
+    .owl-theme .owl-controls .owl-buttons div{
+      position: absolute; top: 0px; width: 40px; height: 100%; text-indent: -9999px; background: transparent; border-radius: 0px;
+    }
+    .owl-theme .owl-controls .owl-buttons div.owl-prev{
+      left: -20px; background: url("@{image}prev-3.png") no-repeat center center; border-radius: 0px;
+    }
+    .owl-theme .owl-controls .owl-buttons div.owl-next{
+      right: -20px; background: url("@{image}next-3.png") no-repeat center center; border-radius: 0px;
+    }
   }
 }
 
