@@ -68,6 +68,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 
 /************ GENERAL STYLES ****************/
 /************ used by all pages *************/
+.m-header{ overflow-x: hidden; }
 .search{
   form{
     max-width: 600px; width: 100%; margin: 0px auto;
@@ -932,12 +933,33 @@ textarea:-moz-placeholder { color:#a9a9a9; }
       }
     }
   }
+
   @media screen{
     @media (max-width: 991px) {
       .t-footer{
         padding: 25px 0px 0px 0px;
         .footer-mb{
           margin-bottom: 25px;
+        }
+        .title-footer{
+          font-size: 16px;
+        }
+      }
+    }
+
+    @media (max-width: 320px){
+      .t-footer {
+        .page-footer{
+          li{
+            a{
+              .title-style;
+              font-size: 14px;
+            }
+          }
+        }
+        .info-footer li{
+          margin-bottom: 12px;
+          font-size: 13px;
         }
       }
     }
@@ -1750,6 +1772,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
     .title-section{
       padding: 0px; margin: 20px 0px; border-bottom: 0px;
     }
+
     .product-item{
       border: 1px solid #ddd; margin-bottom: 25px;
       .product-img{
@@ -1897,6 +1920,22 @@ textarea:-moz-placeholder { color:#a9a9a9; }
         }
       }
     }
+    .row{
+      .col-md-4{
+        &:nth-child(3n){
+          .product-item{
+            .product-img{
+              .view-details{
+                .box-details{
+                  right: 100%;
+                  left: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1909,6 +1948,37 @@ textarea:-moz-placeholder { color:#a9a9a9; }
             .view-details{
               .box-details{
                 top: 100%; left: 0px;
+              }
+            }
+          }
+        }
+        .row{
+          .col-md-4{
+            &:nth-child(3n){
+              .product-item{
+                .product-img{
+                  .view-details{
+                    .box-details{
+                      right: 0px;
+                      left: auto;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991px){
+    .products-inner{
+      .list-products{
+        .product-item{
+          .product-img{
+            &:hover{
+              .view-details{
+                display: none;
               }
             }
           }
@@ -2151,7 +2221,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
     }
   }
   .product-info{
-    padding: 25px; margin: 10px 0px 15px 0px;
+    padding: 25px; margin: 20px 0px 20px 0px; background-color: #f9f9f2;
     h4.title-section{
       padding: 0px; margin: 15px 0px; border-bottom: 0px; font-size: 15px; font-weight: 700;
     }
@@ -2171,15 +2241,16 @@ textarea:-moz-placeholder { color:#a9a9a9; }
   }
   .product-text{
     h5{
-      border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;
+      border-bottom: 1px solid #eee; padding-bottom: 15px;
       a{
         color: @c_active_pagi_2; font-size: 15px;
       }
     }
     .product-text-c{
+      display: none; margin-bottom: 5px; padding-bottom: 20px; border-bottom: 1px solid #eee;
       .product-text-c-in{
         h6{
-          font-weight: 600; margin: 10px 0px; font-size: 15px;
+          font-weight: 600; margin: 15px 0px 10px 0px; font-size: 15px;
         }
         p{
           line-height: 22px; color: @c_gray_black;
@@ -2421,7 +2492,7 @@ textarea:-moz-placeholder { color:#a9a9a9; }
     }
   }
   .product-feature-c{
-    padding: 18px; background: url("@{image}sidebar-bg.png") repeat 0px 0px;
+    padding: 18px; background: #fff url("@{image}sidebar-bg.png") repeat 0px 0px;
     .product-feature-t{
       border-bottom: 1px solid #ddd;
       h2.title-section{
@@ -2469,6 +2540,25 @@ textarea:-moz-placeholder { color:#a9a9a9; }
         }
       }
     }
+  }
+}
+
+.mb-product-feature{
+  display: none;
+}
+
+@media screen {
+  @media (max-width: 991px){
+    .mb-product-feature{
+      display: block; margin-top: 15px;
+    }
+    .pc-product-feature{
+      display: none;
+    }
+  }
+
+  @media (max-width: 479px){
+    .product-feature h1 a{ float: none; margin-top: 5px; }
   }
 }
 

@@ -393,6 +393,19 @@ var product_details = {
         }
       }
     })
+  },
+  showProductText: function(){
+    $('.btnToggleText').click(function(){
+      if(!$('.product-text-c').is(':visible')){
+        $('.product-text-c').slideDown();
+        $(this).html('THU GỌN <i class="fa fa-caret-up" aria-hidden="true"></i>');
+        $('html, body').animate({ scrollTop: $('.product-text-c').offset().top - 50}, 700);
+      } else {
+        $('.product-text-c').slideUp();
+        $(this).html('GIỚI THIỆU TÍNH NĂNG SẢN PHẨM <i class="fa fa-caret-down" aria-hidden="true"></i>');
+      }
+      return false;
+    });
   }
 }
 
@@ -491,6 +504,7 @@ $(document).ready(function() {
 
   product_details.initImages();
   product_details.initOtherProductsCarousel();
+  product_details.showProductText();
 
   project_details.initImages();
 
