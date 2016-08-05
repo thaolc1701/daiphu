@@ -165,7 +165,7 @@ var product = {
   initImages: function(){
     var sync1 = $(".slider");
     var sync2 = $(".thumbnails");
-   
+
     sync1.owlCarousel_1({
       singleItem : true,
       slideSpeed : 1000,
@@ -174,7 +174,7 @@ var product = {
       afterAction : syncPosition,
       responsiveRefreshRate : 200,
     });
-   
+
     sync2.owlCarousel_1({
       items : 4,
       itemsDesktop      : [1199,4],
@@ -187,7 +187,7 @@ var product = {
         el.find(".owl-item").eq(0).addClass("synced");
       }
     });
-   
+
     function syncPosition(el){
       var current = this.currentItem;
       $(".thumbnails")
@@ -199,13 +199,13 @@ var product = {
         center(current)
       }
     }
-   
+
     $(".thumbnails").on("click", ".owl-item", function(e){
       e.preventDefault();
       var number = $(this).data("owlItem");
       sync1.trigger("owl.goTo",number);
     });
-   
+
     function center(number){
       var sync2visible = sync2.data("owlCarousel_1").owl.visibleItems;
       var num = number;
@@ -215,7 +215,7 @@ var product = {
           var found = true;
         }
       }
-   
+
       if(found===false){
         if(num>sync2visible[sync2visible.length-1]){
           sync2.trigger("owl.goTo", num - sync2visible.length+2)
@@ -297,7 +297,7 @@ var product_details = {
   initImages: function(){
     var sync1 = $("#sync1");
     var sync2 = $("#sync2");
-   
+
     sync1.owlCarousel_1({
       singleItem : true,
       slideSpeed : 1000,
@@ -306,7 +306,7 @@ var product_details = {
       afterAction : syncPosition,
       responsiveRefreshRate : 200,
     });
-   
+
     sync2.owlCarousel_1({
       items : 4,
       itemsDesktop      : [1199,4],
@@ -319,7 +319,7 @@ var product_details = {
         el.find(".owl-item").eq(0).addClass("synced");
       }
     });
-   
+
     function syncPosition(el){
       var current = this.currentItem;
       $("#sync2")
@@ -331,13 +331,13 @@ var product_details = {
         center(current)
       }
     }
-   
+
     $("#sync2").on("click", ".owl-item", function(e){
       e.preventDefault();
       var number = $(this).data("owlItem");
       sync1.trigger("owl.goTo",number);
     });
-   
+
     function center(number){
       var sync2visible = sync2.data("owlCarousel_1").owl.visibleItems;
       var num = number;
@@ -347,7 +347,7 @@ var product_details = {
           var found = true;
         }
       }
-   
+
       if(found===false){
         if(num>sync2visible[sync2visible.length-1]){
           sync2.trigger("owl.goTo", num - sync2visible.length+2)
@@ -406,6 +406,9 @@ var product_details = {
       }
       return false;
     });
+  },
+  fixedProductFeature: function(){
+    $('.pc-product-feature').sticky({topSpacing:0});
   }
 }
 
@@ -505,6 +508,7 @@ $(document).ready(function() {
   product_details.initImages();
   product_details.initOtherProductsCarousel();
   product_details.showProductText();
+  product_details.fixedProductFeature();
 
   project_details.initImages();
 

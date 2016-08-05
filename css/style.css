@@ -2901,3 +2901,9 @@ textarea:-moz-placeholder {
     float: none;
   }
 }
+@media screen and (max-width: 991px) {
+  #sticky-wrapper {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
