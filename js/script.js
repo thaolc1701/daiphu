@@ -103,9 +103,10 @@ var home = {
   initHomeProjectCarousel: function(){
     $('.home-project-carousel').owlCarousel({
       loop:true,
-      margin: 30,
+      margin: 15,
       nav:true,
       dots: false,
+      center: true,
       responsive:{
         0:{
           items:1,
